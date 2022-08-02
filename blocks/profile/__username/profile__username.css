@@ -1,0 +1,21 @@
+.profile__username {
+    max-width: 295px;
+    overflow: hidden;
+    line-height: 48px;
+    font-weight: 500;
+    font-size: 42px;
+    color: white;
+    font-style: normal;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+    .profile__username {
+        max-width: 235px;
+        line-height: 33px;
+        font-size: 27px;
+        margin-left: 28px;
+    }
+}
