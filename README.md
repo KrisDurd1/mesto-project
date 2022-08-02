@@ -1,5 +1,5 @@
 # Проект: Место
-* [Ссылка на "Mesto" в GitHub Pages] (https://krisdurd1.github.io/mesto-project/)
+* [Ссылка на "Mesto" в GitHub Pages](https://krisdurd1.github.io/mesto-project/)
 
 **Figma**
 
