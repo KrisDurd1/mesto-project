@@ -8,6 +8,8 @@
     .popup__form-input {
         padding-bottom: 15px;
         padding-top: 75px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
