@@ -24,8 +24,8 @@
             <section class="profile" aria-label="Профиль пользователя">
                 <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватар">
                 <div class="profile__info">
-                    <div class="profile__name">
-                        <h1 class="profile__username">Жак-Ив Кусто</h1>
+                    <div id="profileName" class="profile__name">
+                        <h1 id="profileUsername" class="profile__username">Жак-Ив Кусто</h1>
                         <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
                     </div>
                     <p class="profile__description">Исследователь океана</p>
@@ -37,67 +37,32 @@
 
 
 
+
+
             <section class="elements" aria-label="Карточки с фотографиями">
-                <ul class="cards">
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/kamchatka.jpg" alt="Байкал">
+                <template id="cardTemplate">
+
+                    <div class="cards">
+                        <input type="image" class="cards__image" src="./images/тятя.jpeg" alt="Вулкан Тятя">
+                        <button class="cards__delete" type="submit">
+                            <img class="cards__delete-image" src="./images/delete-button.svg" alt="Урна">
+                        </button>
+                        
                         <div class="cards__description">
-                            <h2 class="cards__text">Озеро Байкал</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
+                            <h2 class="cards__title">Вулкан Тятя</h2>
+                            <button class="cards__like-button" type="button">
+                                <img class="cards__icon" src="./images/like__active.svg" alt="Нравится">
+                            </button>
                         </div>
-                    </li>
-
-
-
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/эльбрус.jpeg" alt="Эльбрус">
-                        <div class="cards__description">
-                            <h2 class="cards__text">Гора Эльбрус</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
-                        </div>
-                    </li>
-
-
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/белуха.jpeg" alt="Белуха">
-                        <div class="cards__description">
-                            <h2 class="cards__text">Гора Белуха</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
-                        </div>
-                    </li>
-
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/тятя.jpeg" alt="вулкан Тятя">
-                        <div class="cards__description">
-                            <h2 class="cards__text">Вулкан Тятя</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
-                        </div>
-                    </li>
-
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/сасык-сиваш.jpeg" alt="озеро Сасык-Сиваш">
-                        <div class="cards__description">
-                            <h2 class="cards__text">Озеро Сасык-Сиваш</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
-                        </div>
-                    </li>
-
-                    <li class="cards__item">
-                        <button class="cards__delete-button" type="button" title="Удалить"></button>
-                        <img class="cards__photo" src="./images/ленские-столбы.jpeg" alt="Ленские столбы">
-                        <div class="cards__description">
-                            <h2 class="cards__text">Ленские столбы</h2>
-                            <button class="cards__like-button" type="button" aria-label="Нравится"></button>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </template>
             </section>
         </main>
+                        
+                        
+                        
+                        
+                        
 
 
         <footer class="footer">
@@ -109,25 +74,48 @@
         <!-- popup edit profile -->
 
 
-        <div class="popup" id="popup-profile">
+        <div class="popup" id="profilePopup">
             <div class="popup__container">
-                <form class="popup__forms" method="post" id="profile-form" action="#" name="profile">
-                <h2 class="popup__title">Редактировать профиль</h2>
-                
+                <form class="forms" method="post" id="profileForm" action="#" name="personal-info">
+                    <h2 class="forms__title">Редактировать профиль</h2>
 
-                    <fieldset class="popup__form-input">
-                        <input class="popup__form-line" type="text" name="name" id="name" placeholder="Ваше имя"
-                            required>
-                        <input class="popup__form-line" type="text" name="description" id="description"
-                            placeholder="Ваш род деятельности" required>
+
+                    <fieldset class="forms__personal-info">
+                        <input 
+                        class="forms__input" 
+                        type="text" 
+                        name="name" 
+                        id="forms__name" 
+                        placeholder="Ваше имя"
+                        value=""
+                        required>
+                        <input 
+                        class="forms__input" 
+                        type="text"
+                         name="description" 
+                         id="forms__description"
+                        placeholder="Ваш профессия" 
+                        value=""
+                        required>
                     </fieldset>
-                    <button class="popup__save-button" type="submit">Сохранить</button>
-                    <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
-
+                    <fieldset class="forms__save">
+                    <button class="forms__save-button" 
+                    type="submit" 
+                    id="submitButton">Сохранить
+                </button>
+                    </fieldset>
                 </form>
+                    <button class="popup__close-button" 
+                    type="button" 
+                    aria-label="Закрыть">
+                    <img
+                    class="popup__close-icon"
+                    src="./images/Close-Icon.svg"
+                    alt="Крестик">
+                </button>
+
             </div>
         </div>
-    </div>
 
 
     <!-- popup mesto -->
@@ -169,7 +157,7 @@
                 <h2 class="cards__text" text=""></h2>
                 <button class="cards__like-button" type="button" aria-label="Нравится"></button>
             </div>
-           
+
         </li>
     </template>
 
