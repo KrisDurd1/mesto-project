@@ -1,0 +1,20 @@
+.cards__delete {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 18px;
+    height: 19px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity .35s ease-out;
+}
+
+
+.cards__delete-button:hover {
+    opacity: .5;
+    cursor: pointer;
+}

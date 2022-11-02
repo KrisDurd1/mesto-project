@@ -47,7 +47,7 @@
                         <button class="cards__delete" type="submit">
                             <img class="cards__delete-image" src="./images/delete-button.svg" alt="Урна">
                         </button>
-                        
+
                         <div class="cards__description">
                             <h2 class="cards__title">Вулкан Тятя</h2>
                             <button class="cards__like-button" type="button">
@@ -58,11 +58,11 @@
                 </template>
             </section>
         </main>
-                        
-                        
-                        
-                        
-                        
+
+
+
+
+
 
 
         <footer class="footer">
@@ -81,88 +81,66 @@
 
 
                     <fieldset class="forms__personal-info">
-                        <input 
-                        class="forms__input" 
-                        type="text" 
-                        name="name" 
-                        id="forms__name" 
-                        placeholder="Ваше имя"
-                        value=""
-                        required>
-                        <input 
-                        class="forms__input" 
-                        type="text"
-                         name="description" 
-                         id="forms__description"
-                        placeholder="Ваш профессия" 
-                        value=""
-                        required>
+                        <input class="forms__input" type="text" name="name" id="forms__name" placeholder="Ваше имя"
+                            value="" required>
+                        <input class="forms__input" type="text" name="description" id="forms__description"
+                            placeholder="Ваша профессия" value="" required>
                     </fieldset>
                     <fieldset class="forms__save">
-                    <button class="forms__save-button" 
-                    type="submit" 
-                    id="submitButton">Сохранить
-                </button>
+                        <button class="forms__save-button" type="submit" id="submitButton">Сохранить
+                        </button>
                     </fieldset>
                 </form>
-                    <button class="popup__close-button" 
-                    type="button" 
-                    aria-label="Закрыть">
-                    <img
-                    class="popup__close-icon"
-                    src="./images/Close-Icon.svg"
-                    alt="Крестик">
+                <button class="popup__close-button" type="button" aria-label="Закрыть">
+                    <img class="popup__close-icon" src="./images/Close-Icon.svg" alt="Крестик">
                 </button>
 
             </div>
         </div>
 
 
-    <!-- popup mesto -->
+        <!-- popup mesto new card-->
 
-    <div class="popup" id="popup-mesto">
-        <div class="popup__container">
-            <form method="post" class="popup__form" id="form-mesto" action="#" name="mesto">
-                <h2 class="popup__form-heading">Новое место</h2>
-                <fieldset class="popup__form-input">
-                    <input type="text" name="mesto-name" id="mesto-name" class="popup__form-item" placeholder="Название"
-                        required />
-                    <input type="url" name="mesto-url" id="mesto-url" class="popup__form-item"
-                        placeholder="Ссылка на картинку" required />
-                </fieldset>
-                <button class="popup__save-button" type="submit">Создать</button>
-            </form>
-            <button class="popup__close-button" type="button" aria-label="Закрыть модальное окно"></button>
-        </div>
-    </div>
-
-
-    <!-- image-popup-->
-
-    <div class="popup popup_type_image" id="image-popup">
-        <figure class="popup__image-container">
-            <img class="popup__image" src="#" alt="#">
-            <button class="popup__close-button" type="button" aria-label="Закрыть изображение"></button>
-            <figcaption class="popup__caption"></figcaption>
-        </figure>
-    </div>
-
-
-
-    <template id="card-template">
-        <li class="card">
-            <button class="card__delete-button" type="button" aria-label="Удалить карточку"></button>
-            <img class="cards__photo" src="#" alt="">
-            <div class="cards__description">
-                <h2 class="cards__text" text=""></h2>
-                <button class="cards__like-button" type="button" aria-label="Нравится"></button>
+        <div class="popup" id="cardAddPopup">
+            <div class="popup__container">
+                <form method="post" class="forms" id="formAdd" action="#" name="form-mesto">
+                    <h2 class="forms__title">Новое место</h2>
+                    <fieldset class="forms__personal-info">
+                        <input type="text" name="mesto-name" id="forms__mesto" class="forms__input" value=""
+                            placeholder="Название" required />
+                        <input type="url" name="mesto-url" id="forms__url" class="forms__input" value=""
+                            placeholder="Ссылка на картинку" required />
+                    </fieldset>
+                    <fieldset class="forms__save">
+                        <button class="forms__save-button" type="submit" id="submitButton">Сохранить</button>
+                    </fieldset>
+                </form>
+                <button class="popup__close-button" type="button" aria-label="Закрыть" id="addClose">
+                    <img class="popup__close-icon" src="./images/Close-Icon.svg" alt="Крестик">
+                </button>
             </div>
-
-        </li>
-    </template>
+        </div>
 
 
-    <script src="./scripts/script.js"></script>
+        <!-- image-popup-->
+
+        <div class="popup" id="imagePopup">
+            <div class="popup__container popup__container-image">
+
+                <button id="imageClose" class="popup__close-button popup__close-button-image"
+                    aria-label="Закрыть изображение" type="button">
+
+
+                    <img class="popup__close-icon" src="./images/Close-Icon.svg" alt="Крестик">
+                </button>
+                <img class="popup__image" src="#" alt="#">
+
+                <p class="popup__caption"></p>
+            </div>
+        </div>
+
+
+        <script src="./script.js"></script>
 </body>
 
 </html>

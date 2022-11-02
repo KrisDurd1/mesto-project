@@ -1,0 +1,14 @@
+.forms__save {
+    display: flex;
+    box-sizing: border-box;
+    border: none;
+    justify-content: center;
+    padding: 48px 36px 37px;
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .forms__save {
+      padding: 45px 22px 25px;
+    }
+  }

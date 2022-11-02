@@ -15,23 +15,38 @@
 
 
 @import url("../blocks/elements/elements.css");
-@import url("../blocks/cards/cards.css");
 
-@import url("../blocks/cards/__item/cards__item.css");
-@import url("../blocks/cards/__photo/cards__photo.css");
-@import url("../blocks/cards/__description/cards__description.css");
+
+
+@import url("../blocks/cards/cards.css");
 @import url("../blocks/cards/__title/cards__title.css");
+@import url("../blocks/cards/__photo/cards__photo.css");
 @import url("../blocks/cards/__like-button/cards__like-button.css");
+@import url("../blocks/cards/__item/cards__item.css");
+@import url("../blocks/cards/__image/cards__image.css");
+@import url("../blocks/cards/__icon/cards__icon.css");
+@import url("../blocks/cards/__description/cards__description.css");
+@import url("../blocks/cards/__delete/cards__delete.css");
 @import url("../blocks/cards/__delete-button/cards__delete-button.css");
 
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__copyright/footer__copyright.css");
+
+
+@import url("../blocks/forms/forms.css");
+@import url("../blocks/forms/__title/forms__title.css");
+@import url("../blocks/forms/__save/forms__save.css");
+@import url("../blocks/forms/__save-button/forms__save-button.css");
+@import url("../blocks/forms/__personal-info/forms__personal-info.css");
+@import url("../blocks/forms/__input/forms__input.css");
+
 @import url("../blocks/popup/popup.css");
 @import url("../blocks/popup/_opened/popup_opened.css");
 @import url("../blocks/popup/__container/popup__container.css");
-@import url("../blocks/popup/__title/popup__title.css");
-@import url("../blocks/popup/__forms/popup__forms.css");
-@import url("../blocks/popup/__form-line/popup__form-line.css");
-@import url("../blocks/popup/__form-input/popup__form-input.css");
+@import url("../blocks/popup/__container-image/popup__container-image.css");
+@import url("../blocks/popup/__image/popup__image.css");
 @import url("../blocks/popup/__save-button/popup__save-button.css");
 @import url("../blocks/popup/__close-button/popup__close-button.css");
+@import url("../blocks/popup/__close-button-image/popup__close-button-image.css");
+@import url("../blocks/popup/__close-icon/popup__close-icon.css");
+@import url("../blocks/popup/__caption/popup__caption.css");

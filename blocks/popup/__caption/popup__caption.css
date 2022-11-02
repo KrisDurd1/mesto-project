@@ -1,0 +1,17 @@
+.popup__caption {
+    display: flex;
+    font-size: 12px;
+    line-height: 1.21px;
+    font-weight: 400;
+    color: white;
+    box-sizing: border-box;
+    bottom: 20px;
+    margin: 0;
+    padding: 10px 0 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .popup__caption {
+      align-self: flex-start;
+    }
+  }

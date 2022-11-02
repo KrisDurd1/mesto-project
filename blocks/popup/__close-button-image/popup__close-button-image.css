@@ -1,0 +1,12 @@
+.popup__close-button-image {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 8px;
+    margin-right: -40px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .popup__close-button-image {
+      margin-right: 0px;
+    }
+  }

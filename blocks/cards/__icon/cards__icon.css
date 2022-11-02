@@ -1,0 +1,11 @@
+.cards__icon {
+    width: 22px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .cards__icon:hover {
+    opacity: 0.5;
+    transition: ease;
+    transition-duration: 0.5s;
+  }
+  
